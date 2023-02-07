@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="WindowShopperApp" customModuleProvider="target">
+            <connections>
+                <outlet property="priceTextField" destination="imd-Q2-3Wj" id="ZLB-uk-kwb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="LSS-7o-Qg4"/>
+                <outlet property="wageTextField" destination="NLx-s3-Vrc" id="5C0-TO-IaD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dimas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLx-s3-Vrc" customClass="CurrencyTextField" customModule="WindowShopperApp" customModuleProvider="target">
+                    <rect key="frame" x="20" y="190" width="374" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="lbm-ng-0Ds"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dimas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imd-Q2-3Wj" customClass="CurrencyTextField" customModule="WindowShopperApp" customModuleProvider="target">
+                    <rect key="frame" x="20" y="290" width="374" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="Tcg-fR-jNo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="imd-Q2-3Wj" firstAttribute="top" secondItem="NLx-s3-Vrc" secondAttribute="bottom" constant="44" id="23s-mu-nGg"/>
+                <constraint firstItem="NLx-s3-Vrc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="8rR-Sd-raA"/>
+                <constraint firstItem="imd-Q2-3Wj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ICI-Sk-Hsf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NLx-s3-Vrc" secondAttribute="trailing" constant="20" id="Ktt-Iy-Qcz"/>
+                <constraint firstItem="NLx-s3-Vrc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="142" id="cab-Dj-7Wi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="imd-Q2-3Wj" secondAttribute="trailing" constant="20" id="dYW-bs-h2F"/>
+            </constraints>
+            <point key="canvasLocation" x="-166.66666666666669" y="19.419642857142858"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="NLx-s3-Vrc">
+            <size key="intrinsicContentSize" width="68.5" height="34"/>
+        </designable>
+        <designable name="imd-Q2-3Wj">
+            <size key="intrinsicContentSize" width="68.5" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
