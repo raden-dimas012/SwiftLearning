@@ -8,9 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="WindowShopperApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Section6ViewController" customModule="BecomeAnAppDeveloper" customModuleProvider="target">
             <connections>
+                <outlet property="clearButton" destination="L0j-bi-8jU" id="gCR-Hm-3F3"/>
+                <outlet property="hoursLabel" destination="4eS-qB-uA4" id="2Ol-un-02G"/>
                 <outlet property="priceTextField" destination="imd-Q2-3Wj" id="ZLB-uk-kwb"/>
+                <outlet property="resultLabel" destination="kOX-cT-vqT" id="GEa-hh-2gq"/>
                 <outlet property="view" destination="iN0-l3-epB" id="LSS-7o-Qg4"/>
                 <outlet property="wageTextField" destination="NLx-s3-Vrc" id="5C0-TO-IaD"/>
             </connections>
@@ -20,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dimas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLx-s3-Vrc" customClass="CurrencyTextField" customModule="WindowShopperApp" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dimas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLx-s3-Vrc" customClass="CurrencyTextField" customModule="BecomeAnAppDeveloper" customModuleProvider="target">
                     <rect key="frame" x="20" y="190" width="374" height="56"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="lbm-ng-0Ds"/>
@@ -28,7 +31,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dimas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imd-Q2-3Wj" customClass="CurrencyTextField" customModule="WindowShopperApp" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dimas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imd-Q2-3Wj" customClass="CurrencyTextField" customModule="BecomeAnAppDeveloper" customModuleProvider="target">
                     <rect key="frame" x="20" y="290" width="374" height="56"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="Tcg-fR-jNo"/>
@@ -36,16 +39,49 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOX-cT-vqT">
+                    <rect key="frame" x="20" y="402" width="374" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eS-qB-uA4">
+                    <rect key="frame" x="20" y="458" width="374" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Ib4-gw-krC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0j-bi-8jU">
+                    <rect key="frame" x="20" y="820" width="374" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="aop-fi-f04"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Clear Calculator"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="imd-Q2-3Wj" firstAttribute="top" secondItem="NLx-s3-Vrc" secondAttribute="bottom" constant="44" id="23s-mu-nGg"/>
+                <constraint firstItem="4eS-qB-uA4" firstAttribute="top" secondItem="kOX-cT-vqT" secondAttribute="bottom" constant="8" symbolic="YES" id="6rC-RK-toU"/>
                 <constraint firstItem="NLx-s3-Vrc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="8rR-Sd-raA"/>
+                <constraint firstItem="kOX-cT-vqT" firstAttribute="top" secondItem="imd-Q2-3Wj" secondAttribute="bottom" constant="56" id="Ex4-5C-c7B"/>
                 <constraint firstItem="imd-Q2-3Wj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ICI-Sk-Hsf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NLx-s3-Vrc" secondAttribute="trailing" constant="20" id="Ktt-Iy-Qcz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kOX-cT-vqT" secondAttribute="trailing" constant="20" id="OMW-m6-4Z0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4eS-qB-uA4" secondAttribute="trailing" constant="20" id="WJ2-MR-H7D"/>
                 <constraint firstItem="NLx-s3-Vrc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="142" id="cab-Dj-7Wi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="imd-Q2-3Wj" secondAttribute="trailing" constant="20" id="dYW-bs-h2F"/>
+                <constraint firstItem="4eS-qB-uA4" firstAttribute="top" secondItem="kOX-cT-vqT" secondAttribute="bottom" constant="8" symbolic="YES" id="emG-7b-I18"/>
+                <constraint firstItem="L0j-bi-8jU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ezv-g5-FtC"/>
+                <constraint firstItem="4eS-qB-uA4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gHN-6g-xo5"/>
+                <constraint firstItem="kOX-cT-vqT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="j96-zA-FS6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="L0j-bi-8jU" secondAttribute="trailing" constant="20" id="lYw-Sv-fup"/>
+                <constraint firstAttribute="bottom" secondItem="L0j-bi-8jU" secondAttribute="bottom" constant="20" id="wqj-7V-n3v"/>
             </constraints>
             <point key="canvasLocation" x="-166.66666666666669" y="19.419642857142858"/>
         </view>
