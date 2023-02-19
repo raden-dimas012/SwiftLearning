@@ -11,6 +11,9 @@ final class Section6ViewController: UIViewController {
     // MARK: Components
     @IBOutlet weak var priceTextField: CurrencyTextField!
     @IBOutlet weak var wageTextField: CurrencyTextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var clearButton: UIButton!
     
     // MARK: Initializer
     init() {
@@ -31,12 +34,30 @@ final class Section6ViewController: UIViewController {
         
         priceTextField.inputAccessoryView = calcBtn
         wageTextField.inputAccessoryView = calcBtn
+        
+        clearButton.addTarget(self, action: #selector(clearCalculate), for: .touchUpInside)
+        
+        resultLabel.isHidden = true
+        hoursLabel.isHidden = true
     }
     
     
     @objc private func calculate() {
-        debugPrint("Dimas")
+        if let wageText = wageTextField.text, let priceText = priceTextField.text {
+            if let wage = Double(wageText), let price = Double(priceText) {
+                view.endEditing(true)
+                resultLabel.isHidden = false
+                hoursLabel.isHidden = false
+                resultLabel.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
+            }
+        }
     }
 
+    @objc private func clearCalculate() {
+        priceTextField.text = nil
+        wageTextField.text = nil
+        resultLabel.isHidden = true
+        hoursLabel.isHidden = true
+    }
 }
 
