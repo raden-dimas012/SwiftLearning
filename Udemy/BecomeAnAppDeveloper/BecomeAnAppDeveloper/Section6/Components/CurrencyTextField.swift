@@ -15,6 +15,7 @@ final class CurrencyTextField: UITextField {
         customizeView()
     }
     
+    // MARK: Lifecycle's
     override func awakeFromNib() {
         super.awakeFromNib()
         customizeView()
