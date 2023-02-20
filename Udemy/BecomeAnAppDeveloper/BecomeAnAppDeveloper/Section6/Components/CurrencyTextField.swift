@@ -10,6 +10,7 @@ import UIKit
 @IBDesignable
 final class CurrencyTextField: UITextField {
     
+    // MARK: For Interactive View in XIB
     override func prepareForInterfaceBuilder() {
         customizeView()
     }
