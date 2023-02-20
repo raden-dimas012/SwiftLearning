@@ -8,5 +8,5 @@
 import Foundation
 
 struct Section7Model {
-    
+    let data: String
 }
