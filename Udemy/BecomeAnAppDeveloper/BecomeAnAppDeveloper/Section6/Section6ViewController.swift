@@ -41,7 +41,7 @@ final class Section6ViewController: UIViewController {
         hoursLabel.isHidden = true
     }
     
-    
+    // MARK: Objc Methods
     @objc private func calculate() {
         if let wageText = wageTextField.text, let priceText = priceTextField.text {
             if let wage = Double(wageText), let price = Double(priceText) {
