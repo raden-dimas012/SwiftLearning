@@ -21,6 +21,7 @@ final class CurrencyTextField: UITextField {
         customizeView()
     }
     
+    // MARK: For Logo Dolar
     override func draw(_ rect: CGRect) {
         let size: CGFloat = 20
         let currrencyLabel: UILabel = UILabel(frame: CGRect(x: 5, y: (frame.size.height / 2) - size / 2, width: size, height: size))
